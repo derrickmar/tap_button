@@ -51,7 +51,7 @@ class User < ActiveRecord::Base
 
   def has_recent_donation
     if self.taps.length > 0
-      return self.taps.order('created_at desc').first.created_at > Time.now-10.seconds
+      return self.taps.order('created_at desc').first.created_at > Time.now-1.minute
     else
       false
     end

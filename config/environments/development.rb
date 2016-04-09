@@ -36,7 +36,8 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
 
-  config.asset_host = "http://e916f419.ngrok.io"
+  # config.asset_host = "http://e916f419.ngrok.io"
+  config.asset_host = 'http://d2d68b40.ngrok.io'; #davids
   # config.asset_host = "http://localhost:3000"
 
 
