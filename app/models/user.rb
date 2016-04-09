@@ -12,4 +12,10 @@
 
 class User < ActiveRecord::Base
   has_many :taps
+
+  def browser_push
+    gcm = GCM.new("AIzaSyBe6RSXBWWsuGNWSOkO_j4ULUNzXv8BfK4")
+    registration_id = [self.gcm_id]
+    response = gcm.send(registration_id)
+  end
 end
