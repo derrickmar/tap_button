@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   get '/uploads' => 'application#uploads'
   get '/test_pins' => 'application#test_pins'
+  get '/collaborators'=>'application#collaborators'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
