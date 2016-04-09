@@ -24,28 +24,19 @@ class User < ActiveRecord::Base
     taps.count * 5
   end
 
-  def friends
-    User.where('id in (?)', Friendship.where(user_id: self.id).pluck(:friend_id))
-  end
-
-  def have_me_as_friend
-    user_ids = Friendship.where(friend_id: self.id).pluck(:user_id)
-    User.where('id in (?)', user_ids)
-  end
 
   def pin_map
     map = {"1"=>0,"2"=>0,"3"=>0}
-    friendships = Friendship.where(user_id: self.id)
-    friendships.each do |f|
-      map[f.friend_number.to_s]=User.find(f.friend_id).has_recent_donation ? 1 : 0
-    end
-    map["3"]=self.has_recent_donation ? 1 : 0
+    group = Group.where('user_1 = ? OR user_2 = ? OR user_3 = ?', self.id, self.id, self.id).first
+    map["1"] = User.find(group.user_1).has_recent_donation ? 1 : 0
+    map["2"] = User.find(group.user_2).has_recent_donation ? 1 : 0
+    map["3"] = User.find(group.user_3).has_recent_donation ? 1 : 0
     return map
   end
 
   def has_recent_donation
     if self.taps.length > 0
-      return self.taps.order('created_at desc').first.created_at > Time.now-10.minutes
+      return self.taps.order('created_at desc').first.created_at > Time.now-10.seconds
     else
       false
     end

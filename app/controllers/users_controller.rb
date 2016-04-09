@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   def pin_map
     user = User.find_by_name(params[:name])
     render json: user.pin_map
-    #{"1" => rand(0..1), "2" => rand(0..1), "3" => rand(0..1)}
+    # {"1" => rand(0..1), "2" => rand(0..1), "3" => rand(0..1)}
     # render json: {'1'=>1,'2'=>0,'3'=>1}
   end
 

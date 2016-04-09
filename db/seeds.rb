@@ -14,11 +14,4 @@ derrick = User.create(name:'Derrick', email:'derrick@gmail.com')
 andre = User.create(name:'Andre',email:'andre@gmail.com')
 
 # davids friends
-Friendship.create(user_id: david.id, friend_id: sophia.id, friend_number: 1)
-Friendship.create(user_id: david.id, friend_id: cady.id, friend_number: 2)
-
-# sophias friends
-Friendship.create(user_id: sophia.id, friend_id: david.id, friend_number: 1)
-Friendship.create(user_id: sophia.id, friend_id: cady.id, friend_number: 2)
-
-
+Group.create(user_1: david.id, user_2: sophia.id, user_3: cady.id)
