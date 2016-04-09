@@ -21,9 +21,24 @@ class User < ActiveRecord::Base
   end
 
   def amount_donated
-    taps.count * 5
+    taps.count * 500
   end
 
+  def total_happiness
+    total = 0
+    taps.each do |tap|
+      total += tap.score unless tap.score.nil?
+    end
+    return total.round * 100
+  end
+
+  def bonus
+    if taps.last.score
+      (taps.last.score * 200).round
+    else
+      0
+    end
+  end
 
   def pin_map
     map = {"1"=>0,"2"=>0,"3"=>0}
@@ -43,6 +58,7 @@ class User < ActiveRecord::Base
   end
 
   def score
+    amount_donated + total_happiness
   end
 
 end
