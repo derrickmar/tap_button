@@ -7,6 +7,9 @@ Rails.application.routes.draw do
       get 'pin_map'
     end
   end
+
+  resources :groups
+
   get '/uploads' => 'application#uploads'
   get '/test_pins' => 'application#test_pins'
   # The priority is based upon order of creation: first created -> highest priority.
