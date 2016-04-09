@@ -1,19 +1,18 @@
 # == Schema Information
 #
-# Table name: taps
+# Table name: friendships
 #
 #  id         :integer          not null, primary key
 #  user_id    :integer
+#  friend_id  :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  avatar     :string
-#  score      :float
 #
 
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+require 'test_helper'
 
-one:
-  user_id: 1
-
-two:
-  user_id: 1
+class FriendshipTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
+end

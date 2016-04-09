@@ -7,6 +7,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  avatar     :string
+#  score      :float
 #
 
 require 'test_helper'

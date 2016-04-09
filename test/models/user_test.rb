@@ -8,6 +8,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  avatar     :string
+#  gcm_id     :text
 #
 
 require 'test_helper'

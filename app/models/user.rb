@@ -8,6 +8,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  avatar     :string
+#  gcm_id     :text
 #
 
 class User < ActiveRecord::Base
@@ -18,4 +19,12 @@ class User < ActiveRecord::Base
     registration_id = [self.gcm_id]
     response = gcm.send(registration_id)
   end
+
+  def amount_donated
+    taps.count * 5
+  end
+
+  def score
+  end
+
 end
