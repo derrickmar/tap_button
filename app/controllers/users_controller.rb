@@ -6,6 +6,9 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
+    @latest_tap = @user.taps.last
+    @previous_score
   end
 
   def pin_map

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
+  root 'users#show', id: 1
 
   resources :taps
   resources :users, param: :name do
