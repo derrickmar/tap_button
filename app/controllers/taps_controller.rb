@@ -5,5 +5,6 @@ class TapsController < ApplicationController
     tap.avatar = params[:file]
     tap.user = user
     tap.save!
+    user.browser_push
   end
 end
