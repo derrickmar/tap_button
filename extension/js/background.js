@@ -1,6 +1,7 @@
 console.log('background.js');
 // HOSTNAME = 'http://f10a1251.ngrok.io';
-HOSTNAME = 'http://localhost:3000'
+// HOSTNAME = 'http://localhost:3000'
+HOSTNAME = 'http://1e4234e0.ngrok.io'; //davids
 
 
 function registerForPush(){
