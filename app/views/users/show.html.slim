@@ -1,10 +1,22 @@
 #users-show
   .container
     .row
-      .col-xs-4.col-xs-offset-4.header
+      .col-xs-5.header
+        h1 Your last tap
+        img.avatar src="#{@latest_tap.avatar.url}"
+        .progress-bar-cont
+          span
+            h4 Happiness Score Increase
+          span#demo
+          .score
+            = "+ #{@user.bonus}"
+      .col-xs-5.col-xs-offset-1.header
         h1 You just helped
-    .row
-      .image-container.col-xs-4.col-xs-offset-4
-        img#tap-img
-        div#demo
+        a.image-container
+          img#tap-img
+        .text-center
+          h1#donee-name
+          hr.star-light
+
+
 

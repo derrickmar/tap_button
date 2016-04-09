@@ -13,7 +13,9 @@ site.users.show = ->
   console.log $("tap-img")
   console.log random_profile["photo_url"]
   $("#tap-img").attr("src", random_profile["photo_url"])
-
+  debugger;
+  $(".image-container").attr("href", random_profile["url"])
+  $("#donee-name").text(random_profile["name"])
 
   $('#demo').jQMeter({
     goal:'$10,000',
