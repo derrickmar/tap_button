@@ -16,7 +16,7 @@ require 'json'
 class Tap < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
   belongs_to :user
-  # before_create :get_happiness_score
+  before_create :get_happiness_score
 
   def get_score
     emotion_path = 'https://api.projectoxford.ai/emotion/v1.0/recognize'

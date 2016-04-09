@@ -2,13 +2,8 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-get_random_profile = ->
-  site.profiles[Math.floor(Math.random()*site.profiles.length)]
-
-tokens = ["594821586bdf"]
-
-random_profile = get_random_profile()
-$("#tap-img").attr("src", random_profile["photo_url"])
+site = window.site
+site.taps = new Object
 
 # $.ajax(
 #     url: "https://watsi.org/fund-treatments.json",

@@ -24,7 +24,16 @@ class User < ActiveRecord::Base
     taps.count * 5
   end
 
+  def total_happiness
+    total = 0
+    taps.each do |tap|
+      total += tap.score unless tap.score.nil?
+    end
+    return total.round
+  end
+
   def score
+    amount_donated + total_happiness
   end
 
 end

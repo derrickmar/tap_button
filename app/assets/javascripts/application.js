@@ -10,8 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require init
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require init
+//= require jqmeter.min
+//= require page_specific_execution
 //= require_tree .
