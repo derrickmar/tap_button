@@ -13,5 +13,15 @@ cady = User.create(name:'Cady', email:'cady@gmail.com')
 derrick = User.create(name:'Derrick', email:'derrick@gmail.com')
 andre = User.create(name:'Andre',email:'andre@gmail.com')
 
+
 # davids friends
 Group.create(user_1: david.id, user_2: sophia.id, user_3: cady.id)
+
+Patient.create(name:'Tsehay', image:'https://d3w52z135jkm97.cloudfront.net/uploads/profile/photo/7893/profile_330x248_f11fdb84-0325-4afd-99bd-f828fabf206f.JPG')
+Patient.create(name:'Joseph', image:'https://d3w52z135jkm97.cloudfront.net/uploads/profile/photo/7895/profile_330x248_2b22e76c-55f3-42d6-a621-8a8431020d13.JPG')
+Patient.create(name:'Dominic',image:'https://d3w52z135jkm97.cloudfront.net/uploads/profile/photo/7894/profile_330x248_e1b91d72-dc5f-4e9e-9d59-bbf0db673546.JPG')
+Patient.create(name:'Bharat', image:'https://d3w52z135jkm97.cloudfront.net/uploads/profile/photo/7867/profile_330x248_ce6294e5-8214-4040-8046-6e497842d703.jpg')
+Patient.create(name:'Jose',image:'https://d3w52z135jkm97.cloudfront.net/uploads/profile/photo/7869/profile_330x248_dcbfb5fa-75ca-47b8-9190-0f0645cf599b.JPG')
+Patient.create(name:'Evelyn',image:'https://d3w52z135jkm97.cloudfront.net/uploads/profile/photo/7883/profile_330x248_c23356c3-c245-464c-af2d-ea9e208cfd85.JPG')
+Patient.create(name:'Kioko',image:'https://d3w52z135jkm97.cloudfront.net/uploads/profile/photo/7897/profile_638x479_cee62d53-3273-4238-8d02-1a98e4787aa5.JPG')
+Patient.create(name:'Maria',image:'https://d3w52z135jkm97.cloudfront.net/uploads/profile/photo/7851/profile_330x248_58acf5c2-d814-4405-86d0-5ed609c1b508.jpg')

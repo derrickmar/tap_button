@@ -1,0 +1,53 @@
+
+
+<script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+
+<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.js"></script>
+
+<style type = 'text/css'>
+.donor-img{
+	height:100px;
+}
+.patient-img{
+	height:100px;
+}
+.centered-row{
+	text-align:center;
+}
+.donor-div{
+	display:inline-block;
+}
+.patient-div{
+	display:inline-block;
+}
+</style>
+
+<% @indices.each do |i| %>
+<div class = 'centered-row'>
+	<div class = 'donor-div'>
+		<span>Happiness score or 0.523</span>
+		<img src = '<%= @donor_images[i] %>' class = 'donor-img'>
+		
+	</div>
+	<div class = 'patient-div'>
+		
+		<img src = '<%= @patient_images[i] %>' class = 'patient-img	'>
+		<span>Alex had a successful knee surgery</span>
+	</div>
+</div>
+<% end %>
+
+<script type = 'text/javascript'>
+$(document).ready(function(){
+	console.log('using masonry');
+	// init Masonry
+	// init Masonry
+	var $grid = $('.grid').masonry({
+	});
+	// layout Masonry after each image loads
+	$grid.imagesLoaded().progress( function() {
+	  $grid.masonry('layout');
+	});
+	
+});
+</script>

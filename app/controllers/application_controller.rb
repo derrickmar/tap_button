@@ -10,4 +10,12 @@ class ApplicationController < ActionController::Base
   def test_pins
   	render 'layouts/test_pins'
   end
+
+  def collaborators
+    @donor_images = Tap.all.map{|x| x.avatar.url}
+    @patient_images = Patient.all.map{|x| x.image}
+    end_i = [@donor_images.length, @patient_images.length].min-1
+    @indices = (0..end_i)
+    render 'layouts/collaborators'
+  end
 end
