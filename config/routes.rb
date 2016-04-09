@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'users#show', id: 1
+  root 'users#show', name: "David"
 
   resources :taps
   resources :users, param: :name do

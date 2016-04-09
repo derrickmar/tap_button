@@ -6,8 +6,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find_by_name(params[:name])
     @latest_tap = @user.taps.last
+    @patient = @latest_tap.patient
   end
 
   def pin_map

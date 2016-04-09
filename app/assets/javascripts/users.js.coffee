@@ -9,13 +9,12 @@ site.users.show = ->
   get_random_profile = ->
     site.common.profiles[Math.floor(Math.random()*site.common.profiles.length)]
 
-  random_profile = get_random_profile()
-  console.log $("tap-img")
-  console.log random_profile["photo_url"]
-  $("#tap-img").attr("src", random_profile["photo_url"])
-  debugger;
-  $(".image-container").attr("href", random_profile["url"])
-  $("#donee-name").text(random_profile["name"])
+  # random_profile = get_random_profile()
+  # console.log $("tap-img")
+  # console.log random_profile["photo_url"]
+  # $("#tap-img").attr("src", random_profile["photo_url"])
+  # $(".image-container").attr("href", random_profile["url"])
+  # $("#donee-name").text(random_profile["name"])
 
   $('#demo').jQMeter({
     goal:'$10,000',

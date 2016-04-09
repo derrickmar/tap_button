@@ -12,10 +12,10 @@
             = "+ #{@user.bonus}"
       .col-xs-5.col-xs-offset-1.header
         h1 You just helped
-        a.image-container
-          img#tap-img
+        image-container
+          img#tap-img src="#{@patient.image}"
         .text-center
-          h1#donee-name
+          h1#donee-name = @patient.name
           hr.star-light
 
 

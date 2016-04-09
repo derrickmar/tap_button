@@ -36,8 +36,8 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
 
-  # config.asset_host = "http://f10a1251.ngrok.io"
-  config.asset_host = "http://localhost:3000"
+  config.asset_host = "http://e916f419.ngrok.io"
+  # config.asset_host = "http://localhost:3000"
 
 
   # Raises error for missing translations

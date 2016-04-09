@@ -1,1 +1,21 @@
-div Group asdfhiou
+#groups-show
+  .container
+    - @taps.each do |tap|
+      .row
+      .col-xs-5.header
+        h1 Your last tap
+        img.avatar src="#{tap.avatar.url}"
+        .progress-bar-cont
+          span
+            h4 Happiness Score Increase
+          span.demo
+          .score
+            = "+ #{tap.user.bonus}"
+      .col-xs-5.col-xs-offset-1.header
+        h1 You just helped
+        image-container
+          img#tap-img src="#{tap.patient.image}"
+        .text-center
+          h1#donee-name = tap.patient.name
+          hr.star-light
+

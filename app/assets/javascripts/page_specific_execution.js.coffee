@@ -6,6 +6,8 @@ ready = ->
   action     = body.attr('data-action')
 
   # site.common.init()
+  console.log controller
+  console.log action
 
   if site[controller]
     site[controller].init() if site[controller].init?

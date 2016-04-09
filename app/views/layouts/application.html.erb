@@ -26,7 +26,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li class="page-scroll">
-                    <%= link_to "My group" %>
+                    <%= link_to "My Lastest Tap", user_path(name: User.first.name) %>
+                </li>
+                <li class="page-scroll">
+                    <%= link_to "My group", group_path(Group.first.id) %>
                 </li>
             </ul>
         </div>
