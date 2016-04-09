@@ -32,6 +32,23 @@ class User < ActiveRecord::Base
     return total.round
   end
 
+  def pin_map
+    map = {"1"=>0,"2"=>0,"3"=>0}
+    group = Group.where('user_1 = ? OR user_2 = ? OR user_3 = ?', self.id, self.id, self.id).first
+    map["1"] = User.find(group.user_1).has_recent_donation ? 1 : 0
+    map["2"] = User.find(group.user_2).has_recent_donation ? 1 : 0
+    map["3"] = User.find(group.user_3).has_recent_donation ? 1 : 0
+    return map
+  end
+
+  def has_recent_donation
+    if self.taps.length > 0
+      return self.taps.order('created_at desc').first.created_at > Time.now-10.seconds
+    else
+      false
+    end
+  end
+
   def score
     amount_donated + total_happiness
   end

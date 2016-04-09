@@ -1,0 +1,41 @@
+﻿{
+	"name": "TapSi",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "Tap to save lives",
+	"icons": {
+		"16": "img/default_icon.png",
+		"128": "img/default_icon.png"
+	},
+	"background": {
+		"scripts": [
+			"js/lib/jquery.min.js",
+			"js/lib/underscore-min.js",
+			"js/background.js"], 
+			"matches":["*://*/*"]
+	  },
+	"minimum_chrome_version": "18",
+		"permissions": [ 
+		"<all_urls>",
+		"http://*/*", 
+		"https://*/*", 
+		"unlimitedStorage", 
+		"contextMenus", 
+		"cookies", 
+		"tabs", 
+		"notifications",
+		"storage",
+		"activeTab",
+		"identity",
+		"identity.email",
+		"http://*/",
+		"https://*/",
+		"notifications",
+		"gcm",
+		"http://fonts.googleapis.com/",
+		"https://fonts.googleapis.com/",
+		"https://apis.google.com/js/api.js", 
+		"file:///*"
+	]
+
+}
