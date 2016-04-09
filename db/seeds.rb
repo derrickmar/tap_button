@@ -7,8 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-david = User.create(name:'David', email:'davidbliu@gmail.com')
-sophia = User.create(name:'Sophia', email:'sophia@gmail.com')
+david = User.create(name:'David', email:'davidbliu@gmail.com',gcm_id: 'APA91bH3MNqgXgzDZmW8lGcliMIWSE-YApTyOJXDoxfDQdL1EBn84a1mUlBYM0h6aJ2g0BhiPPwhntFb981Bfcgfxq5raF40HkkTfCSnzZrWlo356U0R1w7hlEx-C6r7_gErEJ6sMF6oiNI_lU_uS3efDFPxhpWbQw')
+sophia = User.create(name:'Sophia', email:'sophia@gmail.com',gcm_id:'APA91bGx6P-1iCSG3JWbMS0LDq0T0QLpQIi5h2KpOxe2Q4XVx9POnkXOe1lwcXUyOu-tf4n8rqboO0Aan8FoYnF7UGPFgRHyrRmv6cnTF4v-NxmlIT8lbXJUJHgbxTli7SgtLLMqR9jDM3maPhs7x2hQdEq96KyQfw')
 cady = User.create(name:'Cady', email:'cady@gmail.com')
 derrick = User.create(name:'Derrick', email:'derrick@gmail.com')
 andre = User.create(name:'Andre',email:'andre@gmail.com')
